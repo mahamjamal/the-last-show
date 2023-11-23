@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  font-family:'Courier New', Courier, monospace}
+
+header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-bottom: 1px solid rgba(210, 210, 210, 0.514);
+  background-color: white;
+  height: 80px;
+}
+
+
+button.add-obituary {
+  font-family: 'Courier New', Courier, monospace;
+  position: absolute;
+  right: 0;
+  background-color: rgb(0, 0, 0);
+  border: none;
+  height: 80px;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+button.add-obituary:hover {
+  background-color: rgb(110, 110, 110);
+  border-color: white;
+  color: white;
+}
+
+h2.none-added {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(144, 144, 144);
+  margin-top: 5%;
+  font-size:x-large;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: space-evenly;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+img {
+  width: 40%;
+}
+
+button.close-overlay {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bolder;
+  color: rgb(67, 67, 67);
+}
+
+.dates {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#name {
+  height: 50px;
+  font-size: 14pt;
+  margin-top: 5%;
+  padding-left: 1rem;
+}
+
+.submit-button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  width: 100%;
+  height: 55px;
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 5px;
+  margin-top: 5%;
+}
+
+.submit-button:hover {
+  background-color: rgb(67, 67, 67);
+  color: white;
+}
+
+
+
+.image-upload {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  font-size: large;
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.image-upload label {
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.image-upload label:hover {
+  text-decoration-line: underline;
+}
+
+input[type="date"] {
+  border: none;
+  outline: none;
+}
+
+
+.obituaries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px; 
+}
+
+.obituaries-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.obituary-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+@media screen and (max-width: 750px) {
+
+  .obituaries-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    
+  }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1000px) {
+  .obituaries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+  } 
+}
+
+
+.obituary-card {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 40px;
+  height: fit-content;
+}
+
+
+.obituary-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.obituary-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.obituary-dates {
+  font-size: 14px;
+  line-height: 1.2;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.obituary-description {
+  font-size: 14px;
+  margin-top: 20px;
+  line-height: 1.3;
+  font-weight: bold;
+  font-family: "Bush Script M7", "Lucida Handwriting", cursive;
+}
+
+.obituary-audio {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.obituary-audio img {
+  border: 0;
+}
+.play-pause-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.play-pause-button i {
+  margin: 0 10px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+.hide-des {
+  display: none;
+}
+
+.vignette-img {
+  filter: grayscale(100%);
+}
