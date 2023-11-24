@@ -9,8 +9,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,7 +39,6 @@
   },
   "description": "Created Lambda functions in Python for handling GET and POST requests, integrating AWS DynamoDB for data storage and retrieval.\r Interfaced with external APIs including ChatGPT (via Python's requests library) for obituary generation and Cloudinary for secure storage of speech files and images.\r Engineered AWS infrastructure using Terraform, provisioning Lambda functions, DynamoDB tables, and securely managing API keys via AWS Systems Manager Parameter Store.\r Integrated Amazon Polly for text-to-speech conversion",
   "main": "index.js",
-  "devDependencies": {},
   "keywords": [],
   "author": "",
   "license": "ISC"
